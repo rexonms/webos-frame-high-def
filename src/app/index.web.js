@@ -1,31 +1,14 @@
-import React, { useEffect } from 'react';
-import { View } from 'react-native';
-import { Router, navigate } from '@reach/router';
-
-import ScreenHome from '../components/screenHome';
-import ScreenMyPage from '../components/screenMyPage';
-import ScreenModal from '../components/screenModal';
-import Menu from '../components/menu';
-import { themeStyles } from '../config';
+import React, { useEffect } from "react";
+import { View, Text } from "react-native";
+import { themeStyles } from "../config";
+import ScreenFrameHD from "../components/screenFrame";
 
 const App = () => {
-    useEffect(() => {
-        // Required for tizen
-        if (window.focus) window.focus();
-    }, []);
-
-    return (
-        <View style={themeStyles.app}>
-            <Menu focusKey="menu" navigate={navigate} />
-            <View style={themeStyles.appContainer}>
-                <Router>
-                    <ScreenHome path="/" />
-                    <ScreenMyPage path="my-page" />
-                    <ScreenModal path="modal" />
-                </Router>
-            </View>
-        </View>
-    );
+  return (
+    <View style={themeStyles.app}>
+      <ScreenFrameHD />
+    </View>
+  );
 };
 
 export default App;
