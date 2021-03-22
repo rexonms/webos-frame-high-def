@@ -117,6 +117,5 @@
         }
     },
     "currentTemplate": "renative-template-hello-world",
-    "isNew": true,
     "isMonorepo": false
 }
